@@ -1,0 +1,12 @@
+name: Sample Action
+description: Sample Composite Action
+
+runs: 
+  using: composite
+  steps:
+    - name: Git clone another repo
+      uses: action/checkout@v4
+      with:
+        repository: stephan-lopes/swagger@main
+        path: .
+        ref: main

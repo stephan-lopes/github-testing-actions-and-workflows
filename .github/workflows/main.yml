@@ -1,0 +1,12 @@
+name: Testing Action Run
+
+on:
+  push:
+  workflow_dispatch:
+    
+jobs:
+  test-clone-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calling Action Outside
+        uses: stephan-lopes/github-testing-actions-workflows@main
