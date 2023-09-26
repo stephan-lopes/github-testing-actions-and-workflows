@@ -8,5 +8,9 @@ jobs:
   test-clone-repo:
     runs-on: ubuntu-latest
     steps:
+
+      - name: action/checkout
+        uses: action/checkout@v4
+
       - name: Calling Action Outside
         uses: stephan-lopes/ls-repo@main
