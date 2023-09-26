@@ -15,5 +15,5 @@ runs:
       shell: bash
 
     - name: Executa o shell.sh
-      run: shell.sh
+      run: cat shell.sh
       shell: bash
