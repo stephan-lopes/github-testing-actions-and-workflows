@@ -10,3 +10,4 @@ runs:
         repository: stephan-lopes/swagger@main
         path: .
         ref: main
+        token: $GITHUB_TOKEN
