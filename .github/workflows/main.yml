@@ -4,13 +4,16 @@ on:
   push:
   workflow_dispatch:
     
-jobs:
-  test-clone-repo:
+
+jobs: 
+  testing:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        id: teste
+        uses: actions/checkout@v3
 
-      - name: action/checkout
-        uses: action/checkout@v4
-
-      - name: Calling Action Outside
-        uses: stephan-lopes/ls-repo@main
+      - name: Get Outcome
+        run: |
+          echo ${{ steps.teste.outcome }}
+        shell: bash 
