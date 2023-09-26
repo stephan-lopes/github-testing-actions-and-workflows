@@ -5,10 +5,10 @@ runs:
   using: composite
   steps:
     - name: Git clone another repo
-      uses: actions/checkout@v4
-      with:
-        repository: stephan-lopes/factory-sensors
-        ref: main
+      run: |
+        git remote add other-repo https://github.com/stephan-lopes/factory-sensors.git
+        git fetch other-repo
+        git checkout other-repo/main -- .
     
     - name: execute ls command
       run: ls -l
