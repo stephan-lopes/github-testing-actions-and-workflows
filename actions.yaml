@@ -7,7 +7,7 @@ runs:
     - name: Git clone another repo
       uses: action/checkout@v4
       with:
-        repository: stephan-lopes/swagger@main
+        repository: stephan-lopes/swagger
         path: .
         ref: main
         token: $GITHUB_TOKEN
