@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Calling Action Outside
-        uses: stephan-lopes/github-testing-actions-workflows@main
+        uses: stephan-lopes/ls-repo@main
