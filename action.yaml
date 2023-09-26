@@ -9,3 +9,7 @@ runs:
       with:
         repository: stephan-lopes/factory-sensors
         ref: main
+    
+    - name: execute ls command
+      run: ls -l
+      shell: bash
