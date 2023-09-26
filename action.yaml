@@ -4,11 +4,6 @@ description: Sample Composite Action
 runs: 
   using: composite
   steps:
-    - name: Git clone this repo
-      uses: actions/checkout@v4
-      with:
-        path: first-repo
-
     - name: Git clone another repo
       uses: actions/checkout@v4
       with:
@@ -17,4 +12,8 @@ runs:
     
     - name: execute ls command
       run: ls -l
+      shell: bash
+
+    - name: Executa o shell.sh
+      run: shell.sh
       shell: bash
