@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: uses self action
-        uses: . 
+        uses: stephan-lopes/github-testing-actions-and-workflows@main
