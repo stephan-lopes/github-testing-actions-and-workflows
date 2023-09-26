@@ -7,11 +7,11 @@ runs:
     - name: Git clone this repo
       uses: actions/checkout@v4
 
-    - name: Git clone another repo
-      uses: actions/checkout@v4
-      with:
-        repository: stephan-lopes/factory-sensors
-        ref: main
+    # - name: Git clone another repo
+    #   uses: actions/checkout@v4
+    #   with:
+    #     repository: stephan-lopes/factory-sensors
+    #     ref: main
     
     - name: execute ls command
       run: ls -l
