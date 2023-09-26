@@ -9,6 +9,7 @@ runs:
         git remote add other-repo https://github.com/stephan-lopes/factory-sensors.git
         git fetch other-repo
         git checkout other-repo/main -- .
+      shell: bash
     
     - name: execute ls command
       run: ls -l
