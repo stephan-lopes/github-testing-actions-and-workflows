@@ -14,13 +14,12 @@ runs:
       with:
         token: ${{ inputs.token }}
 
-    # - name: Git clone another repo
-    #   run: |
-    #     git clone https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
-    #     # git fetch https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
-    #     # git fetch other-repo
-    #     # git checkout other-repo/main -- .
-    #   shell: bash
+    - name: Git clone another repo
+      run: |
+        # git remote add other-repo https://github.com/stephan-lopes/swagger.git
+        # git fetch other-repo
+        # git checkout other-repo/main -- .
+      shell: bash
     
     - name: execute ls command
       run: ls 
