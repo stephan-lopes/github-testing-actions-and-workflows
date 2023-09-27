@@ -11,8 +11,8 @@ runs:
   steps:
     - name: Git clone another repo
       run: |
-        # git clone https://stephan-lopes:${{ inputs.token }}github.com/stephan-lopes/swagger.git
-        git remote add neworigin "https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git"
+        # git clone https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
+        git remote add neworigin https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
         git pull neworigin
         # git fetch other-repo
         # git checkout other-repo/main -- .
