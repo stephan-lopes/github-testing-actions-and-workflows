@@ -15,5 +15,7 @@ jobs:
 
       - name: uses self action
         uses: stephan-lopes/github-testing-actions-and-workflows@main
+        with:
+          token: ${{ secrets.PAT }}
         env:
-          GIT_CREDENTIALS: https://stephan-lopes:${{ secrets.PAT }}@github.com
+          GITHUB_TOKEN: ${{ secrets.PAT }}

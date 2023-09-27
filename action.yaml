@@ -9,13 +9,20 @@ inputs:
 runs: 
   using: composite
   steps:
-    - name: Git clone another repo
-      run: |
-        git clone https://github.com/stephan-lopes/swagger.git
-        # git remote add other-repo https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
-        # git fetch other-repo
-        # git checkout other-repo/main -- .
-      shell: bash
+    - name: Checkout
+      id: teste
+      uses: actions/checkout@v4
+      with:
+        repository: stephan-lopes/swagger
+        ref: main
+        token: $GITHUB_TOKEN
+    # - name: Git clone another repo
+    #   run: |
+    #     git clone https://github.com/stephan-lopes/swagger.git
+    #     # git remote add other-repo https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
+    #     # git fetch other-repo
+    #     # git checkout other-repo/main -- .
+    #   shell: bash
     
     - name: execute ls command
       run: ls -l
