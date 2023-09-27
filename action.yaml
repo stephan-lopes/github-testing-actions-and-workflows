@@ -18,7 +18,7 @@ runs:
       shell: bash
     
     - name: execute ls command
-      run: ls -l
+      run: ls -l swagger
       shell: bash
 
     - name: Executa o shell.sh
