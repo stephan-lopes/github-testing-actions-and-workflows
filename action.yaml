@@ -9,16 +9,21 @@ inputs:
 runs: 
   using: composite
   steps:
-    - name: Git clone another repo
-      run: |
-        git clone https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
-        # git fetch https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
-        # git fetch other-repo
-        # git checkout other-repo/main -- .
-      shell: bash
+
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ inputs.PAT }}
+
+    # - name: Git clone another repo
+    #   run: |
+    #     git clone https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
+    #     # git fetch https://stephan-lopes:${{ inputs.token }}@github.com/stephan-lopes/swagger.git
+    #     # git fetch other-repo
+    #     # git checkout other-repo/main -- .
+    #   shell: bash
     
     - name: execute ls command
-      run: ls -l swagger
+      run: ls 
       shell: bash
 
     - name: Executa o shell.sh
