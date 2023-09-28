@@ -13,9 +13,9 @@ runs:
   using: composite
   steps:
 
-    # - uses: actions/checkout@v4
-    #   with:
-    #     token: ${{ inputs.token }}
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ inputs.token }}
 
     - name: Git clone another repo
       run: |
