@@ -5,11 +5,6 @@ on:
   workflow_dispatch:
 
 
-env: 
-  env_vars:
-    deployment_name: um_nome_qualquer
-
-
 jobs: 
   testing:
     runs-on: ubuntu-latest
