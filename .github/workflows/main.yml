@@ -8,6 +8,8 @@ on:
 jobs: 
   testing:
     runs-on: ubuntu-latest
+    environment: 
+      name: PATH
     steps:
       - name: Checkout
         id: teste
@@ -19,3 +21,7 @@ jobs:
           token: ${{ secrets.PAT }}
         env:
           contains: TOKEN
+
+      - name: read job env
+        run: echo "${{ jobs.testing.environment }}"
+        shell: bash
