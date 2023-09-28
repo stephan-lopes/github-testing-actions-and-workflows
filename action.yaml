@@ -13,15 +13,16 @@ runs:
   using: composite
   steps:
 
-    - uses: actions/checkout@v4
-      with:
-        token: ${{ inputs.token }}
+    # - uses: actions/checkout@v4
+    #   with:
+    #     token: ${{ inputs.token }}
 
     - name: Git clone another repo
       run: |
-        git remote add other-repo https://github.com/stephan-lopes/swagger.git
-        git fetch other-repo
-        git checkout other-repo/main -- .
+        git clone https://github.com/stephan-lopes/swagger.git
+        # git remote add other-repo https://github.com/stephan-lopes/swagger.git
+        # git fetch other-repo
+        # git checkout other-repo/main -- .
       shell: bash
     
     - name: execute ls command
@@ -29,7 +30,7 @@ runs:
       shell: bash
 
     - name: testing
-      run: echo ${{ contains(env.contains, 'token') }}
+      run: echo ::info::${{ contains(env.contains, 'token') }}
       shell: bash
 
     - name: Executa o shell.sh
