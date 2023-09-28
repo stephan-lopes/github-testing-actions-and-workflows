@@ -28,7 +28,7 @@ jobs:
       #   run: echo "$GITHUB_CONTEXT"
 
       - name: Initialize
-        run: echo ${{ toJson(github) }}
+        run: echo "${{ toJson(github) }}"
         shell: bash
 
       # - name: Dump job context
