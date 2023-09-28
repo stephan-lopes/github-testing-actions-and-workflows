@@ -17,4 +17,4 @@ jobs:
         id: teste
         uses: actions/checkout@v4
 
-      - run: echo ${{ toJson(var) }}
+      - run: echo ${{ toJson(vars) }}
