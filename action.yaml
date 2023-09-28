@@ -30,6 +30,7 @@ runs:
 
     - name: testing
       run: echo ${{ contains(inputs.contains, 'token') }}
+      shell: bash
 
     - name: Executa o shell.sh
       run: cat shell.sh
