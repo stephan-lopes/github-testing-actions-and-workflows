@@ -15,5 +15,5 @@ jobs:
         id: teste
         uses: actions/checkout@v4
 
-      - run: echo ${{ jobs }}
+      - run: echo ${{ toJson(jobs) }}
         shell: bash
