@@ -8,8 +8,7 @@ on:
 jobs: 
   testing:
     runs-on: ubuntu-latest
-    environment: 
-      name: PATH
+    environment: PATH
     steps:
       - name: Checkout
         id: teste
