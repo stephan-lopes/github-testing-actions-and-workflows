@@ -23,5 +23,5 @@ jobs:
           contains: TOKEN
 
       - name: read job env
-        run: echo "${{ github.jobs.testing.environment }}"
+        run: echo "${{ github }}"
         shell: bash
