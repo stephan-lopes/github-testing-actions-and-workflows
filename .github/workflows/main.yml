@@ -27,7 +27,7 @@ jobs:
       #   run: echo "$GITHUB_CONTEXT"
 
       - name: Initialize
-        run: ${{ github.event.deployment.ref }}
+        run: echo ${{ github.event.deployment.ref }}
         shell: bash
 
       # - name: Dump job context
