@@ -3,12 +3,13 @@ name: Testing Action Run
 on:
   push:
   workflow_dispatch:
-    
+
+env: 
+  deployment_name: um_nome_qualquer
 
 jobs: 
   testing:
     runs-on: ubuntu-latest
-    environment: um_nome_qualquer
     steps:
       - name: Checkout
         id: teste
@@ -27,7 +28,7 @@ jobs:
       #   run: echo "$GITHUB_CONTEXT"
 
       - name: Initialize
-        run: echo ${{ github.event.deployment.ref }}
+        run: echo ${{ github }}
         shell: bash
 
       # - name: Dump job context
