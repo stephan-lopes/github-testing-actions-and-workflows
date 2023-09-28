@@ -4,8 +4,11 @@ on:
   push:
   workflow_dispatch:
 
+
 env: 
-  deployment_name: um_nome_qualquer
+  env_vars:
+    deployment_name: um_nome_qualquer
+
 
 jobs: 
   testing:
@@ -17,4 +20,12 @@ jobs:
         id: teste
         uses: actions/checkout@v4
 
-      - run: echo ${{ toJson(vars) }}
+      - run: echo ${{ toJson(environments) }}
+        shell: bash
+
+      - run: echo ${{ toJson(environments) }}
+        shell: bash
+
+      - run: echo ${{ toJson(environments) }}
+        shell: bash
+      
