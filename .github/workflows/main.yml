@@ -14,18 +14,11 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     environment:
-      name: $deployment_name
+      name: um_nome_qualquer
     steps:
       - name: Checkout
         id: teste
         uses: actions/checkout@v4
 
-      - run: echo ${{ toJson(environments) }}
+      - run: echo ${{ vars.TESTE }}
         shell: bash
-
-      - run: echo ${{ toJson(environments) }}
-        shell: bash
-
-      - run: echo ${{ toJson(environments) }}
-        shell: bash
-      
