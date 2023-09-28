@@ -8,7 +8,7 @@ on:
 jobs: 
   testing:
     runs-on: ubuntu-latest
-    environment: PATH
+    environment: um_nome_qualquer
     steps:
       - name: Checkout
         id: teste
