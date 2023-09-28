@@ -29,7 +29,7 @@ runs:
       shell: bash
 
     - name: testing
-      run: echo ${{ contains(inputs.contains, 'token') }}
+      run: echo ${{ contains(env.contains, 'token') }}
       shell: bash
 
     - name: Executa o shell.sh

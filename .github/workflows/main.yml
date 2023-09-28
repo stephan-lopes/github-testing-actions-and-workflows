@@ -17,4 +17,5 @@ jobs:
         uses: stephan-lopes/github-testing-actions-and-workflows@main
         with:
           token: ${{ secrets.PAT }}
+        env:
           contains: TOKEN
