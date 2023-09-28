@@ -22,5 +22,5 @@ jobs:
           contains: TOKEN
 
       - name: read job env
-        run: echo "${{ toJson(github.env) }}"
+        run: echo "${{ toJson(github) }}"
         shell: bash
