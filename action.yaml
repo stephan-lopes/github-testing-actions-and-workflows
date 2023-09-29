@@ -23,15 +23,9 @@ runs:
         git fetch other-repo
         git checkout other-repo/main -- .
       shell: bash
-    
-    - name: execute ls command
-      run: ls 
-      shell: bash
 
-    - name: testing
-      run: echo ::info::${{ contains(env.contains, 'token') }}
-      shell: bash
 
     - name: Executa o shell.sh
-      run: cat shell.sh
+      run: cat \
+        shell.sh
       shell: bash
