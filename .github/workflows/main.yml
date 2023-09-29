@@ -3,14 +3,17 @@ name: Testing Action Run
 on:
   push:
   workflow_dispatch:
-
+    
 
 jobs: 
   testing:
     runs-on: ubuntu-latest
-    environment:
-      name: um_nome_qualquer
     steps:
       - name: Checkout
         id: teste
         uses: actions/checkout@v4
+
+      - name: uses self action
+        uses: stephan-lopes/github-testing-actions-and-workflows@main
+        with:
+          token: ${{ secrets.PAT }}
