@@ -13,19 +13,27 @@ runs:
   using: composite
   steps:
 
-    - uses: actions/checkout@v4
+    - id: checkout
+      uses: actions/checkout@v4
       with:
         token: ${{ inputs.token }}
 
     - name: Git clone another repo
+      id: echo-ls
       run: |
         git remote add other-repo https://github.com/stephan-lopes/swagger.git
         git fetch other-repo
         git checkout other-repo/main -- .
       shell: bash
 
-
     - name: Executa o shell.sh
-      run: cat \
-        shell.sh
+      id: shell-sh
+      run: shell.sh
       shell: bash
+
+    - name: Examinar o conteúdo
+      if: ${{ failure() }}
+      run: echo ${{ toJson(steps) }}
+      shell: bash
+
+    
